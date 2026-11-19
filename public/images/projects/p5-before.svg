@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <filter id="t" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="58"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.38 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <radialGradient id="v" cx="50%" cy="45%" r="75%"><stop offset="55%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".55"/></radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#4e5459"/>
+  <rect width="1600" height="1000" fill="#fff" filter="url(#t)"/>
+  <ellipse cx="251" cy="301" rx="163" ry="83" fill="#3b2a12" fill-opacity="0.35"/><ellipse cx="893" cy="678" rx="258" ry="199" fill="#3b2a12" fill-opacity="0.35"/><ellipse cx="1239" cy="679" rx="166" ry="159" fill="#3b2a12" fill-opacity="0.35"/><ellipse cx="752" cy="401" rx="238" ry="185" fill="#3b2a12" fill-opacity="0.35"/><ellipse cx="821" cy="399" rx="230" ry="114" fill="#3b2a12" fill-opacity="0.35"/><ellipse cx="1044" cy="652" rx="185" ry="116" fill="#3b2a12" fill-opacity="0.35"/><path d="M245.60127735398768 531.0027327067232 L330 538 L440 542 L535 514 L608 513 L710 545 L838 547 L904 530 L999 518 L1080 515 L1194 536 L1266 552 L1380 543 L1456 567 L1562 536" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-linejoin="round"/><path d="M48.60362748084759 321.75060590810637 L150 324 L253 334 L332 337 L439 290 L530 325 L641 313 L740 293 L836 276 L877 290 L1017 323 L1104 299 L1170 296 L1297 273 L1394 301" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-linejoin="round"/>
+  <rect width="1600" height="1000" fill="url(#v)"/>
+  <g font-family="monospace" font-size="26" fill="#fff" fill-opacity=".85" letter-spacing="3">
+    <rect x="48" y="44" width="584" height="56" fill="#070B12" fill-opacity=".7"/>
+    <text x="68" y="82">PROJECT 05 — WATER TANK — BEFORE</text>
+  </g>
+</svg>

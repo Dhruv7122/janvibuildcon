@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <filter id="t" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="76"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.38 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <radialGradient id="v" cx="50%" cy="45%" r="75%"><stop offset="55%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".55"/></radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#55595e"/>
+  <rect width="1600" height="1000" fill="#fff" filter="url(#t)"/>
+  <ellipse cx="204" cy="743" rx="260" ry="209" fill="#14324a" fill-opacity="0.4"/><ellipse cx="225" cy="735" rx="161" ry="216" fill="#14324a" fill-opacity="0.4"/><ellipse cx="878" cy="592" rx="179" ry="111" fill="#14324a" fill-opacity="0.4"/><ellipse cx="451" cy="517" rx="132" ry="188" fill="#14324a" fill-opacity="0.4"/><ellipse cx="1041" cy="614" rx="230" ry="85" fill="#14324a" fill-opacity="0.4"/><ellipse cx="332" cy="747" rx="149" ry="176" fill="#14324a" fill-opacity="0.4"/><path d="M357.209188098651 222.23656104050417 L472 287 L544 293 L598 350 L722 368 L768 406 L893 453 L946 495 L1055 516 L1140 559 L1193 590 L1326 669 L1390 699 L1493 697 L1562 731" fill="none" stroke="#0b0c0e" stroke-width="6" stroke-linejoin="round"/><path d="M198.97798234549256 534.4239210404567 L291 535 L383 554 L489 595 L577 614 L682 625 L775 625 L842 676 L929 706 L1028 697 L1144 728 L1202 769 L1341 797 L1440 803 L1536 784" fill="none" stroke="#0b0c0e" stroke-width="6" stroke-linejoin="round"/>
+  <rect width="1600" height="1000" fill="url(#v)"/>
+  <g font-family="monospace" font-size="26" fill="#fff" fill-opacity=".85" letter-spacing="3">
+    <rect x="48" y="44" width="550" height="56" fill="#070B12" fill-opacity=".7"/>
+    <text x="68" y="82">PROJECT 02 — BASEMENT — BEFORE</text>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <filter id="t" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="11"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.38 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <radialGradient id="v" cx="50%" cy="45%" r="75%"><stop offset="55%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".55"/></radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#6b6f74"/>
+  <rect width="1600" height="1000" fill="#fff" filter="url(#t)"/>
+  <ellipse cx="200" cy="748" rx="184" ry="109" fill="#2b2f33" fill-opacity="0.45"/><ellipse cx="1075" cy="496" rx="192" ry="185" fill="#2b2f33" fill-opacity="0.45"/><ellipse cx="1106" cy="503" rx="271" ry="169" fill="#2b2f33" fill-opacity="0.45"/><ellipse cx="1180" cy="307" rx="202" ry="179" fill="#2b2f33" fill-opacity="0.45"/><ellipse cx="1038" cy="185" rx="270" ry="146" fill="#2b2f33" fill-opacity="0.45"/><path d="M368.96072848185935 684.4453919140833 L457 683 L503 664 L582 671 L613 624 L704 612 L725 597 L805 584 L898 588 L949 594 L971 546 L1064 547 L1119 516 L1211 495 L1241 500" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-linejoin="round"/><path d="M265.7684143007586 754.6087292742956 L342 707 L421 680 L500 652 L598 599 L697 578 L776 553 L844 511 L918 487 L1025 434 L1093 391 L1167 362 L1233 329 L1342 323 L1383 285" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-linejoin="round"/><path d="M31.091968915933727 444.082355147266 L149 410 L215 389 L292 398 L361 401 L494 382 L581 366 L662 311 L705 292 L797 260 L917 257 L1012 255 L1097 223 L1196 206 L1254 228" fill="none" stroke="#0b0c0e" stroke-width="4" stroke-linejoin="round"/>
+  <rect width="1600" height="1000" fill="url(#v)"/>
+  <g font-family="monospace" font-size="26" fill="#fff" fill-opacity=".85" letter-spacing="3">
+    <rect x="48" y="44" width="533" height="56" fill="#070B12" fill-opacity=".7"/>
+    <text x="68" y="82">PROJECT 01 — TERRACE — BEFORE</text>
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <!--head-->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <script>
+      // Runs before paint: enables JS-only styles (preloader, reveals) and records motion preference.
+      (function (d) {
+        var c = d.documentElement.classList;
+        c.remove('no-js');
+        c.add('js', 'is-loading');
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) c.add('reduced-motion');
+        // Saved theme choice (dark is the default).
+        try {
+          if (localStorage.getItem('jb-theme') === 'light') d.documentElement.setAttribute('data-theme', 'light');
+        } catch (e) {}
+      })(document);
+    </script>
+  </head>
+  <body>
+    <!--preloader-->
+    <canvas class="webgl" aria-hidden="true" tabindex="-1" data-webgl></canvas>
+    <div class="fallback-bg" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true" data-cursor-root><span class="cursor__ring"></span><span class="cursor__dot"></span><span class="cursor__label mono" data-cursor-label></span></div>
+    <!--app-->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

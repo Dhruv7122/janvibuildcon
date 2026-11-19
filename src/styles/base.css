@@ -1,0 +1,314 @@
+/* ==========================================================================
+   Base: design tokens, reset, typography, global overlays
+   Change brand colours here — every component reads these variables.
+   ========================================================================== */
+:root {
+  --bg: #070b12;
+  --bg-2: #0c121c;
+  --bg-3: #111a27;
+  --concrete: #8a9099;
+  --cyan: #2ec4f1;
+  --amber: #ffb703;
+  --white: #f4f6f8;
+  --muted: #a3aab4;
+  --line: rgba(244, 246, 248, 0.12);
+  --line-strong: rgba(244, 246, 248, 0.28);
+  --panel: rgba(7, 11, 18, 0.62);
+  --chip: rgba(7, 11, 18, 0.4);
+  --chip-strong: rgba(7, 11, 18, 0.75);
+  --grid-line: rgba(244, 246, 248, 0.035);
+  --cursor-ring: rgba(244, 246, 248, 0.5);
+  --backdrop: rgba(3, 5, 9, 0.85);
+  /* Page colour as an RGB triplet for translucent scrims: rgba(var(--paper-rgb), a) */
+  --paper-rgb: 7, 11, 18;
+  --error: #ff8a8a;
+  --invalid: #ff6b6b;
+  color-scheme: dark;
+
+  --font-head: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Mono', monospace;
+
+  /* power3.out / expo.inOut equivalents for CSS transitions */
+  --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-inout: cubic-bezier(0.87, 0, 0.13, 1);
+  --dur: 0.8s;
+
+  --pad: clamp(20px, 4.5vw, 72px);
+  --header-h: 72px;
+  --radius: 2px;
+}
+
+/* Light theme: same layout, inverted ink/paper, accents darkened for AA contrast on light paper. */
+html[data-theme='light'] {
+  --bg: #eef1f4;
+  --bg-2: #e4e8ed;
+  --bg-3: #d5dbe2;
+  --concrete: #5e6670;
+  --cyan: #07739a;
+  --amber: #8f5b00;
+  --white: #0b1220;
+  --muted: #4b5563;
+  --line: rgba(11, 18, 32, 0.12);
+  --line-strong: rgba(11, 18, 32, 0.28);
+  --panel: rgba(238, 241, 244, 0.74);
+  --chip: rgba(238, 241, 244, 0.6);
+  --chip-strong: rgba(238, 241, 244, 0.88);
+  --grid-line: rgba(11, 18, 32, 0.05);
+  --cursor-ring: rgba(11, 18, 32, 0.45);
+  --backdrop: rgba(214, 220, 227, 0.85);
+  --paper-rgb: 238, 241, 244;
+  --error: #b42318;
+  --invalid: #c62828;
+  color-scheme: light;
+}
+
+/* Applied briefly while switching so colours cross-fade instead of snapping. */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition: background-color 0.6s var(--ease-out), color 0.6s var(--ease-out), border-color 0.6s var(--ease-out),
+    fill 0.6s var(--ease-out), stroke 0.6s var(--ease-out) !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  background: var(--bg);
+  color: var(--white);
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: clamp(15px, 0.35vw + 14px, 17px);
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+html.is-loading body {
+  overflow: hidden;
+}
+
+img,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+::selection {
+  background: var(--cyan);
+  color: var(--bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+/* Sections receive programmatic focus after anchor navigation — no ring needed there. */
+section[tabindex='-1']:focus {
+  outline: none;
+}
+
+html.scroll-locked {
+  overflow: hidden;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 200;
+  padding: 10px 16px;
+  background: var(--cyan);
+  color: var(--bg);
+  font-weight: 600;
+  transform: translateY(-200%);
+  transition: transform 0.3s var(--ease-out);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+/* ---------- Persistent WebGL canvas & overlays ---------- */
+.webgl {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  outline: none;
+}
+
+.fallback-bg {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(46, 196, 241, 0.16), transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(255, 183, 3, 0.08), transparent 50%),
+    url('/images/hero-fallback.svg') center / cover no-repeat,
+    var(--bg);
+}
+
+html.no-webgl .webgl,
+html.no-js .webgl {
+  display: none;
+}
+
+html.no-webgl .fallback-bg,
+html.no-js .fallback-bg {
+  display: block;
+}
+
+html[data-theme='light'] .fallback-bg {
+  background:
+    linear-gradient(rgba(238, 241, 244, 0.84), rgba(238, 241, 244, 0.84)),
+    url('/images/hero-fallback.svg') center / cover no-repeat,
+    var(--bg);
+}
+
+html.no-webgl .webgl-only {
+  display: none !important;
+}
+
+.grid-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: calc((100vw - 2 * var(--pad)) / 12) 100%, 100% 25vh;
+  background-position: var(--pad) 0, 0 0;
+  mask-image: linear-gradient(to bottom, transparent, #000 15%, #000 85%, transparent);
+}
+
+.grain {
+  position: fixed;
+  inset: -50%;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 0.9s steps(6) infinite;
+}
+
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-6%, 4%); }
+  40% { transform: translate(4%, -8%); }
+  60% { transform: translate(-3%, 9%); }
+  80% { transform: translate(8%, 2%); }
+  100% { transform: translate(0, 0); }
+}
+
+main,
+.footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- Reduced motion: no grain animation, instant transitions ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.2s !important;
+  }
+  .grain {
+    animation: none;
+  }
+}

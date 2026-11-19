@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <filter id="t" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="79"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.38 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <radialGradient id="v" cx="50%" cy="45%" r="75%"><stop offset="55%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".55"/></radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#8c8a84"/>
+  <rect width="1600" height="1000" fill="#fff" filter="url(#t)"/>
+  <ellipse cx="410" cy="226" rx="258" ry="82" fill="#3a3a36" fill-opacity="0.3"/><ellipse cx="1174" cy="535" rx="285" ry="98" fill="#3a3a36" fill-opacity="0.3"/><ellipse cx="598" cy="615" rx="330" ry="157" fill="#3a3a36" fill-opacity="0.3"/><ellipse cx="906" cy="655" rx="275" ry="183" fill="#3a3a36" fill-opacity="0.3"/><path d="M239.0218422929858 260.1551273186482 L292 288 L364 289 L456 336 L538 336 L613 347 L670 391 L746 429 L817 419 L894 465 L958 484 L1030 528 L1092 558 L1170 538 L1231 559" fill="none" stroke="#0b0c0e" stroke-width="5" stroke-linejoin="round"/><path d="M50.09695126213922 769.1897941609797 L134 714 L295 709 L406 632 L470 575 L595 566 L685 510 L815 463 L899 411 L1010 404 L1142 374 L1267 314 L1375 266 L1479 259 L1598 217" fill="none" stroke="#0b0c0e" stroke-width="5" stroke-linejoin="round"/><path d="M284.6100640877197 562.0206834571532 L347 555 L470 516 L552 493 L638 456 L700 432 L806 427 L885 424 L969 368 L1050 394 L1190 326 L1272 322 L1339 336 L1451 261 L1551 252" fill="none" stroke="#0b0c0e" stroke-width="5" stroke-linejoin="round"/><path d="M257.14113314502924 456.5371527599809 L341 459 L379 451 L481 406 L528 391 L584 413 L689 388 L735 386 L823 369 L887 365 L952 311 L1021 300 L1099 277 L1166 294 L1232 269" fill="none" stroke="#0b0c0e" stroke-width="5" stroke-linejoin="round"/>
+  <rect width="1600" height="1000" fill="url(#v)"/>
+  <g font-family="monospace" font-size="26" fill="#fff" fill-opacity=".85" letter-spacing="3">
+    <rect x="48" y="44" width="516" height="56" fill="#070B12" fill-opacity=".7"/>
+    <text x="68" y="82">PROJECT 04 — FACADE — BEFORE</text>
+  </g>
+</svg>

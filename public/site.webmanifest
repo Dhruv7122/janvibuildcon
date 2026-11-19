@@ -1,0 +1,12 @@
+{
+  "name": "Janvi Buildcon",
+  "short_name": "Janvi",
+  "icons": [
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#070B12",
+  "theme_color": "#070B12"
+}
